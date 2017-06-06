@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ziyuan</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/ziyuan.css">
+</head>
+<body>
+<div id="menu">
+        <ul type="none;">
+            <li><a href="home.html">首页</a></li>
+            <li><a href="ziyuan.html" class="now">剧场版资源</a></li>
+            <li><a href="xiaren.html">最吓人</a></li>
+            <li><a href="people.html">主线人物</a></li>
+            <li><a href="个人简历/个人简历.html">关于&联系我</a></li>
+        </ul>
+    </div>
+<script language =javascript>
+var curIndex=0;
+//时间间隔(单位毫秒)，每秒钟显示一张，数组共有5张图片放在Photos文件夹下。
+var timeInterval=1000;
+var arr=new Array();
+arr[0]="photos/zy1.png";
+arr[1]="photos/zy2.png";
+arr[2]="photos/zy3.png";
+arr[3]="photos/zy4.jpg";
+setInterval(changeImg,timeInterval);
+function changeImg()
+{
+    var obj=document.getElementById("obj");
+    if (curIndex==arr.length-1) 
+    {
+        curIndex=0;
+    }
+    else
+    {
+        curIndex+=1;
+    }
+    obj.src=arr[curIndex];
+}
+</script>
+
+<img id=obj src ="photos/zy0.jpg" style="margin-left: 20%;height: 500px;width: 500px;margin-top: 2em;">
+<div class="right">
+    <p>名侦探柯南剧场版是指根据漫画《名侦探柯南》改编的系列动画电影。系列影片由名侦探柯南制作委员会出品。儿玉兼嗣、山本泰一郎、静野孔文参与执导，高山南、山口胜平、绪方贤一等参与配音。首部作品于1997年出品。</p>
+    <p>左边图片为部分剧场版宣传徽章，单击下面图标进入剧场版百度网盘资源：(《唐红的恋歌》暂时没有找到资源)<a href="https://pan.baidu.com/wap/album/info?uk=2703739703&album_id=2517613482064903408&third=0&adapt=pc&fr=ftw"><img src="photos/zy0.jpg" height="350px"></a></p>
+   
+</div>
+      
+
+</body>
+</html>
